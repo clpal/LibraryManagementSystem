@@ -20,11 +20,13 @@ public class BookController {
 
     }
     // GET all book
+    @GetMapping
 public List<Book> getAllBooks(){
       return   bookRepository.findAll();
 }
 
 //POST new book
+    @PostMapping
     public  Book createBook(@RequestBody Book book){
       return   bookRepository.save(book);
     }
